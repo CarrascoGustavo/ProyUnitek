@@ -1,0 +1,587 @@
+/* CSS for Servicios.html - UNITEK Premium Standardized Design */
+:root {
+    --bg-light: #f8fafc;
+    --glow-color: rgba(0, 102, 204, 0.2);
+    --transition-speed: 0.4s;
+}
+
+/* Entrance Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Staggered 3D Swing Entrance */
+@keyframes swingOpen {
+    from {
+        opacity: 0;
+        transform: rotateY(-90deg) translateZ(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateY(0deg) translateZ(0);
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: rotateY(-30deg) translateZ(-50px);
+    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+    backface-visibility: hidden;
+}
+
+.reveal.visible {
+    opacity: 1 !important;
+    transform: rotateY(0) translateZ(0) !important;
+    animation: swingOpen 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+/* Staggering the entrance of children */
+.services-grid .reveal:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.services-grid .reveal:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.services-grid .reveal:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.services-grid .reveal:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.services-grid .reveal:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.services-grid .reveal:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.services-grid .reveal:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.services-grid .reveal:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+.services-grid .reveal:nth-child(9) {
+    animation-delay: 0.9s;
+}
+
+/* Hero Section */
+.services-hero {
+    background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)),
+        url('../Imagenes/FondoServicios.png') no-repeat center center/cover;
+    color: var(--accent);
+    padding: 200px 0 120px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.services-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.services-hero p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.95;
+    animation: fadeInUp 1s ease-out 0.2s backwards;
+}
+
+/* Services Carousel Section */
+.services-carousel-section {
+    padding: 120px 0;
+    background:
+        linear-gradient(rgba(0, 74, 153, 0.05), rgba(0, 74, 153, 0.08)),
+        url('../Imagenes/FondoServicios.png') center/cover no-repeat,
+        radial-gradient(circle at center, rgba(230, 240, 255, 0.8) 0%, rgba(240, 247, 255, 0.9) 50%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-stage {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 2000px;
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Services Grid Section - DEPRECATED in favor of Carousel */
+.services-grid-section {
+    display: none;
+}
+
+/* PREMIUM UNIFIED SERVICE CARD - HORIZONTAL SPLIT LAYOUT */
+.service-card {
+    position: absolute;
+    width: 700px;
+    left: 50%;
+    top: 50%;
+    margin-left: -350px;
+    margin-top: -200px;
+    background: rgba(255, 255, 255, 0.95);
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    border-radius: 24px;
+    padding: 0;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.5s ease, filter 0.5s ease;
+    display: flex;
+    flex-direction: row;
+    min-height: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    transform-style: preserve-3d;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    overflow: hidden;
+}
+
+/* Left side: Content */
+.service-card-content {
+    flex: 1;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-card-content>div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Right side: Image */
+.card-image-header {
+    width: 320px;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.card-image-header img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.6s ease;
+}
+
+
+.service-card:hover .card-image-header img {
+    transform: scale(1.05);
+}
+
+/* Card states classes (managed by JS) */
+.service-card.active {
+    opacity: 1;
+    z-index: 10;
+    pointer-events: auto;
+    filter: blur(0) grayscale(0%);
+}
+
+.service-card.prev,
+.service-card.next {
+    opacity: 0.85;
+    z-index: 5;
+    filter: blur(2.5px) grayscale(100%);
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.service-card.hidden {
+    opacity: 0.3;
+    z-index: 1;
+    filter: blur(5px) grayscale(100%);
+    pointer-events: none;
+}
+
+/* Remove conflicting hover transforms on service-card */
+.service-card:hover {
+    /* Keep card stable, no additional transforms */
+}
+
+/* Remove all 3D transforms on content elements */
+.service-card>*,
+.service-card:hover>* {
+    transform: none !important;
+}
+
+/* Remove pseudo-element effects that might interfere */
+.service-card::after {
+    display: none;
+}
+
+/* Icon Box Style */
+.card-icon-box {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary), #004a99);
+    color: var(--background);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.2);
+}
+
+/* Remove all hover transforms on content - CRITICAL RULE */
+.service-card:hover .card-icon-box,
+.service-card:hover h3,
+.service-card:hover p,
+.service-card:hover ul,
+.service-card:hover ul li,
+.service-card:hover .impact-statement,
+.service-card:hover .service-card-content,
+.service-card:hover .service-card-content>* {
+    transform: none !important;
+}
+
+/* Icon Box Style */
+.card-icon-box {
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, var(--primary), #004a99);
+    color: var(--background);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 12px;
+    box-shadow: 0 6px 16px rgba(0, 102, 204, 0.2);
+}
+
+/* Typography */
+.service-card h3 {
+    font-size: 1.4rem;
+    margin: 0 0 8px 0;
+    color: var(--foreground);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.service-card p {
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.7);
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+}
+
+/* Impact Statement */
+.impact-statement {
+    display: inline-block;
+    font-size: 0.6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    color: var(--primary);
+    margin: 6px 0 10px 0;
+    padding: 4px 10px;
+    background: rgba(0, 102, 204, 0.08);
+    border-radius: 50px;
+    border: 1px solid rgba(0, 102, 204, 0.2);
+}
+
+/* List Styling */
+.service-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px 0;
+}
+
+.service-card ul li {
+    position: relative;
+    padding: 4px 0 4px 20px;
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.75);
+    line-height: 1.3;
+}
+
+.service-card ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+/* Standardized Buttons Container */
+.card-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 15px;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-service {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+/* Stagger buttons pop out */
+.btn-whatsapp {
+    transition-delay: 0.1s;
+}
+
+.btn-proyectos {
+    transition-delay: 0.2s;
+}
+
+/* WhatsApp Button Style */
+.btn-whatsapp {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+    filter: brightness(1.1);
+}
+
+/* Projects Button Style */
+.btn-proyectos {
+    background: linear-gradient(135deg, var(--primary) 0%, #004a99 100%);
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(0, 74, 153, 0.2);
+}
+
+.btn-proyectos:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 74, 153, 0.3);
+    filter: brightness(1.1);
+}
+
+.btn-proyectos i {
+    transition: transform 0.3s ease;
+}
+
+.btn-proyectos:hover i {
+    transform: translateX(5px);
+}
+
+.service-card:hover .btn-service {
+    gap: 15px;
+    color: white !important;
+    /* Ensure visibility in 3D space */
+}
+
+/* Featured card "Visual" pop */
+.service-card.highlight {
+    border: 1px solid var(--secondary);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(0, 184, 212, 0.05));
+}
+
+.service-card.highlight .card-icon-box {
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    animation: icon-float 3s ease-in-out infinite, glow-pulse 3s infinite;
+}
+
+.service-card.highlight .impact-statement {
+    background: rgba(0, 184, 212, 0.1);
+    color: var(--secondary);
+    border-color: rgba(0, 184, 212, 0.2);
+}
+
+.service-card.highlight:hover {
+    box-shadow:
+        0 40px 80px rgba(0, 184, 212, 0.15),
+        0 0 0 2px var(--secondary) inset;
+}
+
+@keyframes glow-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 184, 212, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 20px rgba(0, 184, 212, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 184, 212, 0);
+    }
+}
+
+/* Partners / Clients Section Styles */
+.partners {
+    padding: 60px 0;
+    background: var(--background);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--foreground);
+}
+
+/* Carousel Navigation - TRIANGLE STYLE */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    z-index: 30;
+    color: var(--primary);
+    transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.4;
+    /* Blurred/Low visibility when idle */
+}
+
+.carousel-nav.prev {
+    left: 40px;
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+.carousel-nav.next {
+    right: 40px;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.carousel-nav:hover {
+    background: rgba(0, 102, 204, 0.15);
+    opacity: 1;
+    color: #ffffff;
+    border-color: var(--primary);
+}
+
+.carousel-nav i {
+    font-size: 2rem;
+    pointer-events: none;
+    filter: drop-shadow(0 0 10px rgba(0, 102, 204, 0.5));
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 20;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #cbd5e0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: var(--primary);
+    width: 30px;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .services-hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .carousel-stage {
+        height: 650px;
+    }
+
+    .service-card {
+        width: 340px;
+        margin-left: -170px;
+        padding: 40px 30px;
+    }
+
+    .carousel-nav {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-nav {
+        display: none;
+        /* Hide nav arrows on mobile, use touch/indicators */
+    }
+
+    .carousel-stage {
+        height: 600px;
+    }
+
+    .service-card {
+        width: 300px;
+        margin-left: -150px;
+    }
+}

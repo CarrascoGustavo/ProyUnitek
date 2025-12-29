@@ -1,0 +1,89 @@
+/* Partners/Clients Carousel Styles */
+.partners {
+    padding: 60px 0;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: #003366;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.partners-slider {
+    height: 120px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.partners-slider::before,
+.partners-slider::after {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 120px;
+    position: absolute;
+    width: 150px;
+    z-index: 2;
+}
+
+.partners-slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.partners-slider::before {
+    left: 0;
+    top: 0;
+}
+
+.partners-slider .slide-track {
+    -webkit-animation: scroll 40s linear infinite;
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 20);
+    /* 250px * number of slides (10 original + 10 duplicate) */
+}
+
+.partners-slider .slide {
+    height: 120px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.partners-slider .slide img {
+    max-height: 80px;
+    max-width: 180px;
+    width: auto;
+    /* Removed grayscale and opacity to keep logos always colored */
+    filter: none;
+    opacity: 1;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.partners-slider .slide img:hover {
+    transform: scale(1.1);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 10));
+    }
+
+    /* Move specifically by the width of the original set */
+}

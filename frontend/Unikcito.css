@@ -1,0 +1,196 @@
+/* Unikcito.css - High-End Corporate UI for UNITEK */
+
+:root {
+    --unikcito-navy: #003366;
+    --unikcito-blue: #0066cc;
+    --unikcito-silver: #f8fafc;
+    --unikcito-border: #e2e8f0;
+    --unikcito-text: #1e293b;
+    --unikcito-shadow: 0 10px 30px rgba(0, 51, 102, 0.15);
+}
+
+/* Floating Launcher */
+.unikcito-launcher {
+    position: fixed;
+    bottom: 120px;
+    /* Above WhatsApp */
+    right: 40px;
+    width: 65px;
+    height: 65px;
+    background: white;
+    border: 2px solid var(--unikcito-navy);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: var(--unikcito-shadow);
+    z-index: 10000;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.unikcito-launcher:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 51, 102, 0.25);
+    border-color: var(--unikcito-blue);
+}
+
+.unikcito-launcher img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Chat Window */
+.unikcito-window {
+    position: fixed;
+    bottom: 200px;
+    right: 40px;
+    width: 400px;
+    height: 600px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid var(--unikcito-border);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 10001;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.unikcito-window.active {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Header */
+.unikcito-header {
+    background: var(--unikcito-navy);
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.unikcito-header .bot-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.unikcito-header .bot-brand img {
+    width: 32px;
+    height: 32px;
+    background: white;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.unikcito-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.unikcito-header .close-icon {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/* Messages Area */
+.unikcito-messages {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: var(--unikcito-silver);
+}
+
+.u-message {
+    max-width: 85%;
+    padding: 14px 18px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    border-radius: 8px;
+}
+
+.u-message.bot {
+    align-self: flex-start;
+    background: white;
+    color: var(--unikcito-text);
+    border-left: 4px solid var(--unikcito-navy);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.u-message.user {
+    align-self: flex-end;
+    background: var(--unikcito-navy);
+    color: white;
+}
+
+/* Input Area */
+.unikcito-input-section {
+    padding: 20px;
+    background: white;
+    border-top: 1px solid var(--unikcito-border);
+    display: flex;
+    gap: 12px;
+}
+
+.unikcito-input-section input {
+    flex: 1;
+    border: 1px solid var(--unikcito-border);
+    padding: 12px 18px;
+    border-radius: 6px;
+    outline: none;
+    font-size: 0.95rem;
+    transition: border-color 0.3s;
+}
+
+.unikcito-input-section input:focus {
+    border-color: var(--unikcito-navy);
+}
+
+.unikcito-input-section button {
+    background: var(--unikcito-navy);
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.unikcito-input-section button:hover {
+    background: var(--unikcito-blue);
+}
+
+/* Typing Indicator */
+.u-typing {
+    display: none;
+    align-self: flex-start;
+    font-size: 0.85rem;
+    color: #64748b;
+    font-style: italic;
+    margin-left: 10px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .unikcito-window {
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        right: 0;
+        border-radius: 0;
+    }
+}

@@ -1,0 +1,275 @@
+/* Carousel Container */
+.team-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    overflow: visible;
+    padding: 20px 0;
+}
+
+/* Carousel Inner Container */
+.carousel-container {
+    position: relative;
+    height: 650px;
+    /* Increased height for detailed cards */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+/* Member Cards - Base Styles */
+.member {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    pointer-events: none;
+    width: 380px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Content Wrapper */
+.card-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid #0066cc;
+}
+
+.card-details {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #fff;
+}
+
+.card-details h3 {
+    margin: 0 0 10px;
+    color: #222;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.card-desc {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Impact Pill Badge */
+.impact-pill {
+    background: #eef6ff;
+    color: #0066cc;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 102, 204, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 102, 204, 0.1);
+}
+
+/* Checklist */
+.card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px;
+    text-align: left;
+    width: 100%;
+}
+
+.card-list li {
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-list li i {
+    color: #0066cc;
+    font-size: 14px;
+}
+
+/* Service Buttons */
+.service-buttons {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+.service-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    flex: 1;
+}
+
+.btn-whatsapp {
+    background: #25D366;
+    color: #fff;
+    border: 1px solid #25D366;
+}
+
+.btn-whatsapp:hover {
+    background: #1da851;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+}
+
+.btn-info {
+    background: white;
+    color: #0066cc;
+    border: 1px solid #0066cc;
+}
+
+.btn-info:hover {
+    background: #f0f7ff;
+    border-color: #0055aa;
+    color: #0055aa;
+    box-shadow: 0 4px 10px rgba(0, 102, 204, 0.15);
+}
+
+/* Active Card - Front & Center */
+.member.active {
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 10;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Next Card - Right Side */
+.member.next {
+    transform: translate(30%, -50%) scale(0.85);
+    /* Slightly Adjusted for card width */
+    z-index: 5;
+    opacity: 0.6;
+    filter: blur(1px) brightness(0.95);
+    pointer-events: auto;
+    /* Allow clicking to navigate */
+}
+
+/* Previous Card - Left Side */
+.member.prev {
+    transform: translate(-130%, -50%) scale(0.85);
+    z-index: 5;
+    opacity: 0.6;
+    filter: blur(1px) brightness(0.95);
+    pointer-events: auto;
+}
+
+/* Navigation Buttons */
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.85);
+    /* Glassmorphism base */
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 102, 204, 0.2);
+    border-radius: 50%;
+    color: #0066cc;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 50;
+    /* Ensure it's above everything */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.btn:hover {
+    background: #0066cc;
+    color: white;
+    border-color: #0066cc;
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 8px 25px rgba(0, 102, 204, 0.3);
+}
+
+.btn:active {
+    transform: translateY(-50%) scale(0.95);
+    box-shadow: 0 4px 10px rgba(0, 102, 204, 0.2);
+}
+
+.btn i {
+    pointer-events: none;
+    /* Ensure click goes to button */
+}
+
+/* Specific Positioning */
+.btn.prev {
+    left: 20px;
+}
+
+.btn.next {
+    right: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-carousel {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .carousel-container {
+        height: 600px;
+        perspective: none;
+        /* Simplify on mobile */
+    }
+
+    .member {
+        width: 320px;
+    }
+
+    .member.next,
+    .member.prev {
+        opacity: 0;
+        /* Hide side cards on small screens for cleaner look */
+        pointer-events: none;
+    }
+
+    .card-img {
+        height: 160px;
+    }
+
+    .btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}

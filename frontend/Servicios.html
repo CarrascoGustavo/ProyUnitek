@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Especializados - UNITEK</title>
+    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="EstiloIndex.css">
+    <link rel="stylesheet" href="EstiloFooter.css">
+    <link rel="stylesheet" href="EstiloNuestraEmpresa.css">
+    <link rel="stylesheet" href="EstiloBotonWha.css">
+    <link rel="stylesheet" href="EstiloServicios.css">
+    <link rel="stylesheet" href="EstiloCarrusel.css">
+    <link rel="stylesheet" href="CarruselServicio.css">
+    <link rel="stylesheet" href="Unikcito.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header header-opaque">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="../Imagenes/LogoUnitek.png" alt="UNITEK Logo">
+                    </a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu"
+                    onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="NuestraEmpresa.html">Nuestra empresa</a></li>
+                    <li><a href="Servicios.html">Servicios</a></li>
+                    <li><a href="Proyectos.html">Proyectos</a></li>
+                    <li><a href="index.html#cotizar">Cotizar</a></li>
+                    <li><a href="#Login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <div class="container">
+            <h1>Soluciones Tecnológicas Premium</h1>
+            <p>Infraestructura de alta disponibilidad y soporte especializado para empresas de misión crítica.</p>
+        </div>
+    </section>
+
+    <!-- Services 3D Carousel Section -->
+    <div class="team-carousel">
+        <button class="btn prev" aria-label="Servicio anterior"><i class="fas fa-chevron-left"></i></button>
+        <div class="carousel-container">
+            <!-- 1. Infraestructura TI -->
+            <div class="member">
+                <div class="card-content-wrapper">
+                    <img src="../Imagenes/InfraestructuraTI.png" alt="Infraestructura TI" class="card-img">
+                    <div class="card-details">
+                        <h3>Infraestructura TI</h3>
+                        <p class="card-desc">Diseño y ejecución de núcleos tecnológicos robustos y escalables.
+                        </p>
+                        <div class="impact-pill">POTENCIA OPERATIVA TOTAL</div>
+                        <ul class="card-list">
+                            <li><i class="fas fa-check"></i> Cableado certificado Cat 6A/7</li>
+                            <li><i class="fas fa-check"></i> Data Centers redundantes</li>
+                            <li><i class="fas fa-check"></i> Gestión de almacenamiento</li>
+                        </ul>
+                        <div class="service-buttons">
+                            <a href="https://wa.me/51950144190?text=Hola,%20me%20interesa%20el%20servicio%20de%20Infraestructura%20TI"
+                                class="service-btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp"></i> Contáctanos
+                            </a>
+                            <a href="Proyectos.html" class="service-btn btn-info">
+                                <i class="fas fa-info-circle"></i> Más información
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Redes y Conectividad -->
+            <div class="member">
+                <div class="card-content-wrapper">
+                    <img src="../Imagenes/RedesyConectividad.png" alt="Redes y Conectividad" class="card-img">
+                    <div class="card-details">
+                        <h3>Redes y Conectividad</h3>
+                        <p class="card-desc">Comunicación ultra-segura con latencia cero para sedes críticas.
+                        </p>
+                        <div class="impact-pill">CONECTIVIDAD SIN LÍMITES</div>
+                        <ul class="card-list">
+                            <li><i class="fas fa-check"></i> Redes WiFi 6 integrales</li>
+                            <li><i class="fas fa-check"></i> VPNs y SD-WAN Pro</li>
+                            <li><i class="fas fa-check"></i> Gestión avanzada Firewalls</li>
+                        </ul>
+                        <div class="service-buttons">
+                            <a href="https://wa.me/51950144190?text=Hola,%20me%20interesa%20el%20servicio%20de%20Redes%20y%20Conectividad"
+                                class="service-btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp"></i> Contáctanos
+                            </a>
+                            <a href="Proyectos.html" class="service-btn btn-info">
+                                <i class="fas fa-info-circle"></i> Más información
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Seguridad Electrónica -->
+            <div class="member">
+                <div class="card-content-wrapper">
+                    <img src="../Imagenes/SeguridadElectronica.png" alt="Seguridad Electrónica" class="card-img">
+                    <div class="card-details">
+                        <h3>Seguridad Electrónica</h3>
+                        <p class="card-desc">Vigilancia inteligente proactiva para la protección total de
+                            activos.</p>
+                        <div class="impact-pill">PROTECCIÓN INTELIGENTE</div>
+                        <ul class="card-list">
+                            <li><i class="fas fa-check"></i> CCTV IP con analítica</li>
+                            <li><i class="fas fa-check"></i> Control acceso biométrico</li>
+                            <li><i class="fas fa-check"></i> Alarmas de alta seguridad</li>
+                        </ul>
+                        <div class="service-buttons">
+                            <a href="https://wa.me/51950144190?text=Hola,%20me%20interesa%20el%20servicio%20de%20Seguridad%20Electrónica"
+                                class="service-btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp"></i> Contáctanos
+                            </a>
+                            <a href="Proyectos.html" class="service-btn btn-info">
+                                <i class="fas fa-info-circle"></i> Más información
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Sistemas y Software -->
+            <div class="member">
+                <div class="card-content-wrapper">
+                    <img src="../Imagenes/SistemaySoftware.png" alt="Sistemas y Software" class="card-img">
+                    <div class="card-details">
+                        <h3>Sistemas y Software</h3>
+                        <p class="card-desc">Eficiencia operativa mediante digitalización y herramientas
+                            líderes.</p>
+                        <div class="impact-pill">GESTIÓN AUTOMATIZADA</div>
+                        <ul class="card-list">
+                            <li><i class="fas fa-check"></i> Microsoft y Google Cloud</li>
+                            <li><i class="fas fa-check"></i> Virtualización avanzada</li>
+                            <li><i class="fas fa-check"></i> Backup & Recovery Pro</li>
+                        </ul>
+                        <div class="service-buttons">
+                            <a href="https://wa.me/51950144190?text=Hola,%20me%20interesa%20el%20servicio%20de%20Sistemas%20y%20Software"
+                                class="service-btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp"></i> Contáctanos
+                            </a>
+                            <a href="Proyectos.html" class="service-btn btn-info">
+                                <i class="fas fa-info-circle"></i> Más información
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Puntos de Venta (POS) -->
+            <div class="member">
+                <div class="card-content-wrapper">
+                    <img src="../Imagenes/PuntosdeVentas.png" alt="Puntos de Venta (POS)" class="card-img">
+                    <div class="card-details">
+                        <h3>Puntos de Venta (POS)</h3>
+                        <p class="card-desc">Agilidad transaccional para el sector industrial y retail masivo.
+                        </p>
+                        <div class="impact-pill">TRANSACCIONES RÁPIDAS</div>
+                        <ul class="card-list">
+                            <li><i class="fas fa-check"></i> Terminales All-in-One</li>
+                            <li><i class="fas fa-check"></i> Control inventario Real-Time</li>
+                            <li><i class="fas fa-check"></i> Soporte POS especializado</li>
+                        </ul>
+                        <div class="service-buttons">
+                            <a href="https://wa.me/51950144190?text=Hola,%20me%20interesa%20el%20servicio%20de%20Puntos%20de%20Venta"
+                                class="service-btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp"></i> Contáctanos
+                            </a>
+                            <a href="Proyectos.html" class="service-btn btn-info">
+                                <i class="fas fa-info-circle"></i> Más información
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Soluciones Digitales -->
+            <div class="member">
+                <div class="card-content-wrapper">
+                    <img src="../Imagenes/SolucionesDigitales.png" alt="Soluciones Digitales" class="card-img">
+                    <div class="card-details">
+                        <h3>Soluciones Digitales</h3>
+                        <p class="card-desc">Espacios interactivos que transforman la experiencia del cliente.
+                        </p>
+                        <div class="impact-pill">EXPERIENCIA INTERACTIVA</div>
+                        <ul class="card-list">
+                            <li><i class="fas fa-check"></i> Digital Signage & Videowalls</li>
+                            <li><i class="fas fa-check"></i> Salas de reuniones IoT</li>
+                            <li><i class="fas fa-check"></i> Menús dinámicos Pro</li>
+                        </ul>
+                        <div class="service-buttons">
+                            <a href="https://wa.me/51950144190?text=Hola,%20me%20interesa%20el%20servicio%20de%20Soluciones%20Digitales"
+                                class="service-btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp"></i> Contáctanos
+                            </a>
+                            <a href="Proyectos.html" class="service-btn btn-info">
+                                <i class="fas fa-info-circle"></i> Más información
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Soporte Técnico -->
+            <div class="member">
+                <div class="card-content-wrapper">
+                    <img src="../Imagenes/SoporteyMantenimiento.png" alt="Soporte Técnico" class="card-img">
+                    <div class="card-details">
+                        <h3>Soporte Técnico</h3>
+                        <p class="card-desc">Respuesta inmediata para garantizar la continuidad de su negocio.
+                        </p>
+                        <div class="impact-pill">CONTINUIDAD GARANTIZADA</div>
+                        <ul class="card-list">
+                            <li><i class="fas fa-check"></i> Mantenimiento preventivo</li>
+                            <li><i class="fas fa-check"></i> Help Desk multicanal</li>
+                            <li><i class="fas fa-check"></i> Soporte On-Site 24/7</li>
+                        </ul>
+                        <div class="service-buttons">
+                            <a href="https://wa.me/51950144190?text=Hola,%20me%20interesa%20el%20servicio%20de%20Soporte%20Técnico"
+                                class="service-btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp"></i> Contáctanos
+                            </a>
+                            <a href="Proyectos.html" class="service-btn btn-info">
+                                <i class="fas fa-info-circle"></i> Más información
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Equipamiento Tecnológico -->
+            <div class="member">
+                <div class="card-content-wrapper">
+                    <img src="../Imagenes/EquipamientoTecnologico.png" alt="Equipamiento Tecnológico" class="card-img">
+                    <div class="card-details">
+                        <h3>Equipamiento Tecnológico</h3>
+                        <p class="card-desc">Suministro de hardware premium para máxima productividad laboral.
+                        </p>
+                        <div class="impact-pill">PRODUCTIVIDAD EXTREMA</div>
+                        <ul class="card-list">
+                            <li><i class="fas fa-check"></i> Laptops corporativas Pro</li>
+                            <li><i class="fas fa-check"></i> Planes renovación Tech</li>
+                            <li><i class="fas fa-check"></i> Equipos aeronáuticos</li>
+                        </ul>
+                        <div class="service-buttons">
+                            <a href="https://wa.me/51950144190?text=Hola,%20me%20interesa%20el%20servicio%20de%20Equipamiento%20Tecnológico"
+                                class="service-btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp"></i> Contáctanos
+                            </a>
+                            <a href="Proyectos.html" class="service-btn btn-info">
+                                <i class="fas fa-info-circle"></i> Más información
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. Desarrollo Web Premium -->
+            <div class="member">
+                <div class="card-content-wrapper">
+                    <img src="../Imagenes/DesarrolloWeb.jpg" alt="Desarrollo Web Premium" class="card-img">
+                    <div class="card-details">
+                        <h3>Desarrollo Web Premium</h3>
+                        <p class="card-desc">Experiencias digitales únicas con velocidad y funcionalidad
+                            extrema.</p>
+                        <div class="impact-pill">IMPACTO DIGITAL TOTAL</div>
+                        <ul class="card-list">
+                            <li><i class="fas fa-check"></i> Arquitectura vanguardista</li>
+                            <li><i class="fas fa-check"></i> Diseño UI/UX Identity</li>
+                            <li><i class="fas fa-check"></i> Optimización SEO Pro</li>
+                        </ul>
+                        <div class="service-buttons">
+                            <a href="https://wa.me/51950144190?text=Hola,%20me%20interesa%20el%20servicio%20de%20Desarrollo%20Web%20Premium"
+                                class="service-btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp"></i> Contáctanos
+                            </a>
+                            <a href="Proyectos.html" class="service-btn btn-info">
+                                <i class="fas fa-info-circle"></i> Más información
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn next" aria-label="Siguiente servicio"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <script src="../backend/CarruselServicios.js"></script>
+    <!-- Clientes Section -->
+    <section class="partners" id="proyectos">
+        <div class="container">
+            <h1 class="section-title">CLIENTES</h1>
+            <div class="partners-slider slider-socios">
+                <div class="slide-track">
+                    <div class="slide"><img src="../ImagenesClientes/1.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/2.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/3.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/4.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/5.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/6.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/7.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/8.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/9.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/10.svg" alt="Logo de cliente UNITEK"
+                            loading="lazy"></div>
+                    <!-- Duplicate for infinite loop -->
+                    <div class="slide"><img src="../ImagenesClientes/1.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/2.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/3.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/4.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/5.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/6.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/7.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/8.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/9.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/10.svg" alt="Logo de cliente UNITEK"
+                            loading="lazy"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+    <script src="../backend/FooterComponent.js"></script>
+    <script src="../backend/Unikcito.js"></script>
+    <script src="../backend/Script.js"></script>
+    <script src="../backend/CarruselServicios.js"></script>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/51950144190?text=Hola%20UNITEK,%20solicito%20informaci%C3%B3n%20sobre%20Desarrollo%20Web%20y%20servicios%20TI!!"
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+
+</body>
+
+</html>

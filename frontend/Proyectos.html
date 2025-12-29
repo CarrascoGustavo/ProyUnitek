@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos - UNITEK</title>
+    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="EstiloIndex.css">
+    <link rel="stylesheet" href="EstiloFooter.css">
+    <link rel="stylesheet" href="EstiloNuestraEmpresa.css">
+    <link rel="stylesheet" href="EstiloBotonWha.css">
+    <link rel="stylesheet" href="CarruselClientes.css">
+    <link rel="stylesheet" href="CarruselProyectos.css">
+    <link rel="stylesheet" href="Unikcito.css">
+    <link rel="stylesheet" href="EstiloProyecto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .projects-hero {
+            background: linear-gradient(rgba(240, 250, 255, 0.7), rgba(180, 220, 255, 0.8)), url('../Imagenes/FondoProyectos.png');
+            background-size: cover;
+            background-position: center;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #003366;
+            margin-top: 80px;
+            border-bottom: 2px solid rgba(0, 102, 204, 0.2);
+        }
+
+        .projects-hero h1 span {
+            color: #0066cc;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header header-opaque">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="../Imagenes/LogoUnitek.png" alt="UNITEK Logo">
+                    </a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu"
+                    onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="NuestraEmpresa.html">Nuestra empresa</a></li>
+                    <li><a href="Servicios.html">Servicios</a></li>
+                    <li><a href="Proyectos.html">Proyectos</a></li>
+                    <li><a href="index.html#cotizar">Cotizar</a></li>
+                    <li><a href="#Login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="projects-hero">
+        <div class="container">
+            <h1>Nuestros <span>Proyectos</span></h1>
+            <p>Casos de éxito que demuestran nuestra excelencia operativa</p>
+        </div>
+    </section>
+
+    <!-- 3D Projects Carousel -->
+    <section class="projects-carousel-section">
+        <div class="container">
+            <h1 class="carousel-title">Portafolio de <span>Proyectos</span></h1>
+            <div class="projects-carousel">
+                <button class="carousel-nav-btn prev" title="Proyecto anterior" aria-label="Proyecto anterior"><i
+                        class="fas fa-chevron-left"></i></button>
+
+                <div class="projects-container">
+                    <!-- Project Gallery (Full Set of 18 Images) -->
+                    <div class="project-card active"><img src="../ImagenesProyectos/DSC07262.jpg" alt="Proyecto UNITEK"
+                            class="project-card-img"></div>
+                    <div class="project-card"><img src="../ImagenesProyectos/DSC07271.jpg" alt="Proyecto UNITEK"
+                            class="project-card-img"></div>
+                    <div class="project-card"><img src="../ImagenesProyectos/DSC07280.jpg" alt="Proyecto UNITEK"
+                            class="project-card-img"></div>
+                    <div class="project-card"><img src="../ImagenesProyectos/DSC07305.jpg" alt="Proyecto UNITEK"
+                            class="project-card-img"></div>
+                    <div class="project-card"><img src="../ImagenesProyectos/DSC07308.jpg" alt="Proyecto UNITEK"
+                            class="project-card-img"></div>
+                    <div class="project-card"><img src="../ImagenesProyectos/DSC07312.jpg" alt="Proyecto UNITEK"
+                            class="project-card-img"></div>
+                    <div class="project-card"><img src="../ImagenesProyectos/DSC07316.jpg" alt="Proyecto UNITEK"
+                            class="project-card-img"></div>
+                    <div class="project-card"><img src="../ImagenesProyectos/DSC07336.jpg" alt="Proyecto UNITEK"
+                            class="project-card-img"></div>
+                    <div class="project-card"><img src="../ImagenesProyectos/DSC07370.jpg" alt="Proyecto UNITEK"
+                            class="project-card-img"></div>
+                    <div class="project-card"><img src="../ImagenesProyectos/DSC07372.jpg" alt="Proyecto UNITEK"
+                            class="project-card-img"></div>
+                    <div class="project-card"><img src="../ImagenesProyectos/DSC07390.jpg" alt="Proyecto UNITEK"
+                            class="project-card-img"></div>
+                    <div class="project-card"><img src="../ImagenesProyectos/DSC07560.jpg" alt="Proyecto UNITEK"
+                            class="project-card-img"></div>
+                    <div class="project-card"><img src="../ImagenesProyectos/DSC07913.jpg" alt="Proyecto UNITEK"
+                            class="project-card-img"></div>
+                    <div class="project-card"><img src="../ImagenesProyectos/DSC07926.jpg" alt="Proyecto UNITEK"
+                            class="project-card-img"></div>
+                    <div class="project-card"><img src="../ImagenesProyectos/IMG_8701.jpg" alt="Proyecto UNITEK"
+                            class="project-card-img"></div>
+                    <div class="project-card"><img src="../ImagenesProyectos/IMG_8792.jpg" alt="Proyecto UNITEK"
+                            class="project-card-img"></div>
+                    <div class="project-card"><img src="../ImagenesProyectos/IMG_8842.jpg" alt="Proyecto UNITEK"
+                            class="project-card-img"></div>
+                    <div class="project-card"><img src="../ImagenesProyectos/IMG_8885.jpg" alt="Proyecto UNITEK"
+                            class="project-card-img"></div>
+                </div>
+
+                <button class="carousel-nav-btn next" title="Siguiente proyecto" aria-label="Siguiente proyecto"><i
+                        class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clientes Section -->
+    <section class="partners" id="proyectos">
+        <div class="container">
+            <h1 class="section-title">CLIENTES</h1>
+            <div class="partners-slider slider-socios">
+                <div class="slide-track">
+                    <div class="slide"><img src="../ImagenesClientes/1.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/2.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/3.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/4.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/5.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/6.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/7.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/8.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/9.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/10.svg" alt="Logo de cliente UNITEK"
+                            loading="lazy"></div>
+                    <!-- Duplicate for infinite loop -->
+                    <div class="slide"><img src="../ImagenesClientes/1.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/2.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/3.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/4.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/5.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/6.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/7.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/8.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/9.svg" alt="Logo de cliente UNITEK" loading="lazy">
+                    </div>
+                    <div class="slide"><img src="../ImagenesClientes/10.svg" alt="Logo de cliente UNITEK"
+                            loading="lazy"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+    <script src="../backend/FooterComponent.js"></script>
+    <script src="../backend/Unikcito.js"></script>
+    <script src="../backend/Script.js"></script>
+    <script src="../backend/CarruselProyectos.js"></script>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/51950144190?text=Hola%20UNITEK,%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20proyectos."
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="Vista previa del proyecto">
+    </div>
+
+    <!-- Lightbox Script -->
+    <script src="../backend/LightboxProyectos.js"></script>
+</body>
+
+</html>
